@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Sai Teja | Portfolio</title>
+
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --primary: #0a3d62;
+        }
+
+        body.dark {
+            --bg-color: #121212;
+            --text-color: #f1f1f1;
+            --card-bg: #1e1e1e;
+            --primary: #4dabf7;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* HEADER */
+        header {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            animation: fadeUp 1s ease;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeUp 1s ease;
+        }
+
+        /* CENTER ALL HEADINGS */
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        /* SKILLS */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skills-list li {
+            background: var(--card-bg);
+            border: 2px solid var(--primary);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skills-list li:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--card-bg);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--primary);
+            border-radius: 6px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* CERTIFICATES */
+        .cert-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-list li {
+            background: var(--card-bg);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        /* RESUME BUTTON */
+        .resume-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <h1>P. Sai Teja</h1>
+    <p>B.Tech Student | Web Developer | Network Engineer</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a B.Tech student at Vasavi College of Engineering with a strong passion
+        for computer networking and software development. I have hands-on experience
+        in C, Java, Python, and Data Structures, and I enjoy building efficient,
+        secure, and scalable solutions. I am continuously learning new technologies
+        and aim to grow as a skilled network and software professional.
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>C</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Data Structures</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Networking</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>LAN Chat Application</h3>
+        <p>Real-time messaging application for users within a local network.</p>
+    </div>
+
+    <div class="card">
+        <h3>Student Management System</h3>
+        <p>Application to manage and organize student records efficiently.</p>
+    </div>
+
+    <div class="card">
+        <h3>Personal Portfolio Website</h3>
+        <p>Responsive portfolio website built using HTML and CSS.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Certificates</h2>
+    <ul class="cert-list">
+        <li>NPTEL – Python Programming</li>
+        <li>CISCO Networking Certificate</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: tejanaidu979@gmail.com</p>
+    <p>Phone: +91 9182835086</p>
+    <a class="resume-btn" href="resume.pdf" download>⬇️ Download Resume</a>
+</section>
+
+<footer>
+    <p>© 2026 P. Sai Teja | All Rights Reserved</p>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+    }
+</script>
+
+</body>
+</html>
+
